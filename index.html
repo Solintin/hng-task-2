@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        .my-name{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="name">
+        <div style="margin-bottom: 10px;">
+            <button id="print">Print My Name</button>
+        </div>
+        <a href="https://alleyresume.netlify.app"><span class='my-name'></span>
+        </a>
+
+    </div>
+
+    <script>
+        const print = document.querySelector('#print');
+        const nameInput = document.querySelector('.my-name')
+        print.addEventListener('click', () => {
+            nameInput.innerHTML = '<strong> Soliu Alley </strong>  '
+        })
+    </script>
+</body>
+
+</html>
